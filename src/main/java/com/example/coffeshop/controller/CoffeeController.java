@@ -26,7 +26,6 @@ public class CoffeeController {
     @GetMapping("find/{id}")
     public Coffee findByCoffe(@PathVariable("id") Long id)  {
       return coffeService.findCoffeeById(id);
-
     }
     @PostMapping("add")
     public ResponseEntity<String> add(@RequestBody Coffee coffee){
