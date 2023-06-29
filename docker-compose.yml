@@ -8,3 +8,5 @@ services:
       - POSTGRES_USER=user
       - POSTGRES_PASSWORD=user
       - POSTGRES_DB=db_coffeshop
+    ports:
+      - "54321:5432"
