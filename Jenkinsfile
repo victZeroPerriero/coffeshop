@@ -12,7 +12,7 @@ node {
       sh "./mvnw test -Punit"
     }
     stage("Deployment") {
-      sh 'nohup mvn spring-boot:run -Dserver.port=8088 &'
+      sh 'nohup java -jar coffeshop-0.0.1-SNAPSHOT.jar --server.port=8088 &'
     }
   }
 }
