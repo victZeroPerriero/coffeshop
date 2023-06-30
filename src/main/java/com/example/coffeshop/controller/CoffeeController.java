@@ -31,6 +31,6 @@ public class CoffeeController {
     @PostMapping("add")
     public ResponseEntity<String> add(@RequestBody Coffee coffee){
         coffeService.addCoffee(coffee);
-        return new ResponseEntity<>("coffee created", HttpStatus.CREATED);
+        return new ResponseEntity<>("coffee created", HttpStatus.OK);
     }
 }

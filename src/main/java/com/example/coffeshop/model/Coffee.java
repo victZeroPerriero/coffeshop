@@ -17,7 +17,7 @@ public class Coffee extends BisnesEntity {
     private Status status;
     @Column(name = "price")
     private BigDecimal price;
-    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd-MM-yyyy")
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @Column(name = "create_date")
     private LocalDate createDate;
     @Column(name = "is_remove")
