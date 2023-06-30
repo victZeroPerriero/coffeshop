@@ -20,8 +20,6 @@ import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
-import java.util.Optional;
-
 
 @WebMvcTest(CoffeeController.class)
 public class TestCoffeeController {

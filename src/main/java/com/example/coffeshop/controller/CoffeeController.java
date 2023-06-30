@@ -18,11 +18,13 @@ import java.util.List;
 @RequiredArgsConstructor
 public class CoffeeController {
     private final CoffeService coffeService;
+
     @RequestMapping(value = "coffees", method = RequestMethod.GET,
             produces = MediaType.APPLICATION_JSON_VALUE)
     public List<Coffee> getAll(){
         return coffeService.getAllCoffee();
     }
+
     @GetMapping("find/{id}")
     public Coffee findByCoffe(@PathVariable("id") Long id)  {
       return coffeService.findCoffeeById(id);
