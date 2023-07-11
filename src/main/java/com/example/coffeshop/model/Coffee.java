@@ -2,7 +2,7 @@ package com.example.coffeshop.model;
 
 import com.example.coffeshop.util.Status;
 import com.fasterxml.jackson.annotation.JsonFormat;
-import lombok.Data;
+
 
 import javax.persistence.*;
 import java.math.BigDecimal;
@@ -17,7 +17,7 @@ public class Coffee extends BisnesEntity {
     private Status status;
     @Column(name = "price")
     private BigDecimal price;
-    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd-MM-yyyy")
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @Column(name = "create_date")
     private LocalDate createDate;
     @Column(name = "is_remove")
@@ -38,36 +38,36 @@ public class Coffee extends BisnesEntity {
         return description;
     }
 
-    public Status getStatus() {
-        return status;
-    }
-
-    public BigDecimal getPrice() {
-        return price;
-    }
-
-    public LocalDate getCreateDate() {
-        return createDate;
-    }
-
-    public boolean isRemove() {
-        return isRemove;
-    }
-
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public Status getStatus() {
+        return status;
     }
 
     public void setStatus(Status status) {
         this.status = status;
     }
 
+    public BigDecimal getPrice() {
+        return price;
+    }
+
     public void setPrice(BigDecimal price) {
         this.price = price;
     }
 
+    public LocalDate getCreateDate() {
+        return createDate;
+    }
+
     public void setCreateDate(LocalDate createDate) {
         this.createDate = createDate;
+    }
+
+    public boolean isRemove() {
+        return isRemove;
     }
 
     public void setRemove(boolean remove) {

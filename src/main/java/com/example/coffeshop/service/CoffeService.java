@@ -13,6 +13,7 @@ import java.util.List;
 @Transactional
 @RequiredArgsConstructor
 public class CoffeService {
+
     private final CoffeeRepository coffeeRepository;
     public List<Coffee> getAllCoffee(){
         return coffeeRepository.findAll();
