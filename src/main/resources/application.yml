@@ -11,3 +11,9 @@ spring:
     url: jdbc:postgresql://localhost:54321/db_coffeshop
     username: user
     password: user
+
+bezkoder:
+      app:
+          jwtCookieName: bezkoder
+           jwtSecret: spring
+                jwtExpirationMs: 86400000
